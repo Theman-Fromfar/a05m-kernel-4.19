@@ -12,7 +12,7 @@
 [ -z $DEFAULT_KSU_REPO ] && DEFAULT_KSU_REPO="https://raw.githubusercontent.com/rsuntk/KernelSU/main/kernel/setup.sh"
 [ -z $DEFAULT_KSU_BRANCH ] && DEFAULT_KSU_BRANCH="main"
 [ -z $DEFAULT_AK3_REPO ] && DEFAULT_AK3_REPO="https://github.com/rsuntk/AnyKernel3.git"
-[ -z $DEVICE ] && DEVICE="Unknown"
+[ -z $DEVICE ] && DEVICE="A055F"
 
 # special rissu's path. linked to his toolchains
 if [ -d /rsuntk ]; then
@@ -274,7 +274,7 @@ handle_lto() {
 # call summary
 pr_sum
 if [ "$BUILD" = "kernel" ]; then
-	make -j`echo $ALLOC_JOB` -C $(pwd) O=$(pwd)/out `echo $DEFAULT_ARGS` `echo $BUILD_DEFCONFIG` rsuntk.config
+	make -j`echo $ALLOC_JOB` -C $(pwd) O=$(pwd)/out `echo $DEFAULT_ARGS` `echo $BUILD_DEFCONFIG` a05m.config
 	[ "$KERNELSU" = "true" ] && setconfig enable KSU
 	[ "$LTO" != "none" ] && handle_lto || pr_info "LTO not set";
 	make -j`echo $ALLOC_JOB` -C $(pwd) O=$(pwd)/out `echo $DEFAULT_ARGS`
@@ -285,5 +285,5 @@ if [ "$BUILD" = "kernel" ]; then
 		pr_post_build "failed"
 	fi
 elif [ "$BUILD" = "defconfig" ]; then
-	make -j`echo $ALLOC_JOB` -C $(pwd) O=$(pwd)/out `echo $DEFAULT_ARGS` `echo $BUILD_DEFCONFIG` rsuntk.config
+	make -j`echo $ALLOC_JOB` -C $(pwd) O=$(pwd)/out `echo $DEFAULT_ARGS` `echo $BUILD_DEFCONFIG` a05m.config
 fi
