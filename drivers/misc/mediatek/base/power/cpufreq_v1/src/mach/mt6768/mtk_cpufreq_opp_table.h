@@ -698,22 +698,22 @@
 #define CPU_DVFS_FREQ15_L_G75		850000		/* KHz */
 
 /* for DVFS OPP table CCI */
-#define CPU_DVFS_FREQ0_CCI_G75		1277000		/* KHz */
-#define CPU_DVFS_FREQ1_CCI_G75		1120000		/* KHz */
-#define CPU_DVFS_FREQ2_CCI_G75		1049000		/* KHz */
-#define CPU_DVFS_FREQ3_CCI_G75		1014000		/* KHz */
-#define CPU_DVFS_FREQ4_CCI_G75		961000		/* KHz */
-#define CPU_DVFS_FREQ5_CCI_G75		909000		/* KHz */
-#define CPU_DVFS_FREQ6_CCI_G75		856000		/* KHz */
-#define CPU_DVFS_FREQ7_CCI_G75		821000		/* KHz */
-#define CPU_DVFS_FREQ8_CCI_G75		768000		/* KHz */
-#define CPU_DVFS_FREQ9_CCI_G75		733000		/* KHz */
-#define CPU_DVFS_FREQ10_CCI_G75	        698000		/* KHz */
-#define CPU_DVFS_FREQ11_CCI_G75	        663000		/* KHz */
-#define CPU_DVFS_FREQ12_CCI_G75	        628000		/* KHz */
-#define CPU_DVFS_FREQ13_CCI_G75	        593000		/* KHz */
-#define CPU_DVFS_FREQ14_CCI_G75	        558000		/* KHz */
-#define CPU_DVFS_FREQ15_CCI_G75	        500000		/* KHz */
+#define CPU_DVFS_FREQ0_CCI_G75	1600000		/* KHz */
+#define CPU_DVFS_FREQ1_CCI_G75	1343000		/* KHz */
+#define CPU_DVFS_FREQ2_CCI_G75	1290000		/* KHz */
+#define CPU_DVFS_FREQ3_CCI_G75	1263000		/* KHz */
+#define CPU_DVFS_FREQ4_CCI_G75	1187000		/* KHz */
+#define CPU_DVFS_FREQ5_CCI_G75	1120000		/* KHz */
+#define CPU_DVFS_FREQ6_CCI_G75	1049000		/* KHz */
+#define CPU_DVFS_FREQ7_CCI_G75	997000		/* KHz */
+#define CPU_DVFS_FREQ8_CCI_G75	944000		/* KHz */
+#define CPU_DVFS_FREQ9_CCI_G75	856000		/* KHz */
+#define CPU_DVFS_FREQ10_CCI_G75	821000		/* KHz */
+#define CPU_DVFS_FREQ11_CCI_G75	751000		/* KHz */
+#define CPU_DVFS_FREQ12_CCI_G75	680000		/* KHz */
+#define CPU_DVFS_FREQ13_CCI_G75	610000		/* KHz */
+#define CPU_DVFS_FREQ14_CCI_G75	558000		/* KHz */
+#define CPU_DVFS_FREQ15_CCI_G75	500000		/* KHz */
 
 /* for DVFS OPP table L */
 #define CPU_DVFS_VOLT0_VPROC1_G75	100625		/* 10uV */
@@ -1076,6 +1076,9 @@ static struct mt_cpu_freq_method opp_tbl_method_CCI_PRO[] = {
 static struct mt_cpu_freq_method opp_tbl_method_LL_G75[] = {
 	/* POS,	CLK */
 	FP(1,	1),
+	FP(1,	1),
+	FP(1,	1),
+	FP(1,	1),
 	FP(2,	1),
 	FP(2,	1),
 	FP(2,	1),
@@ -1088,9 +1091,6 @@ static struct mt_cpu_freq_method opp_tbl_method_LL_G75[] = {
 	FP(2,	1),
 	FP(2,	1),
 	FP(2,	1),
-	FP(4,	1),
-	FP(4,	1),
-	FP(4,	1),
 };
 
 static struct mt_cpu_freq_method opp_tbl_method_L_G75[] = {
@@ -1115,22 +1115,22 @@ static struct mt_cpu_freq_method opp_tbl_method_L_G75[] = {
 
 static struct mt_cpu_freq_method opp_tbl_method_CCI_G75[] = {
 	/* POS,	CLK */
-	FP(2,	1),
-	FP(2,	1),
-	FP(2,	1),
-	FP(2,	1),
-	FP(2,	1),
-	FP(2,	1),
-	FP(2,	1),
-	FP(2,	1),
-	FP(2,	1),
-	FP(4,	1),
-	FP(4,	1),
-	FP(4,	1),
-	FP(4,	1),
-	FP(4,	1),
-	FP(4,	1),
-	FP(4,	1),
+	FP(1,	1),
+	FP(1,	1),
+	FP(1,	1),
+	FP(1,	1),
+	FP(1,	1),
+	FP(1,	1),
+	FP(1,	1),
+	FP(1,	1),
+	FP(1,	1),
+	FP(1,	1),
+	FP(1,	1),
+	FP(1,	1),
+	FP(1,	1),
+	FP(1,	1),
+	FP(1,	1),
+	FP(1,	1),
 };
 
 struct opp_tbl_m_info opp_tbls_m[NR_MT_CPU_DVFS][NUM_CPU_LEVEL] = {

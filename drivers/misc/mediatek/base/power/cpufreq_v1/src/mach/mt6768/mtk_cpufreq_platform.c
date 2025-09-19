@@ -57,7 +57,7 @@ struct mt_cpu_dvfs cpu_dvfs[NR_MT_CPU_DVFS] = {
 		.name		= __stringify(MT_CPU_DVFS_LL),
 		.id		= MT_CPU_DVFS_LL,
 		.cpu_id		= 0,
-		.idx_normal_max_opp = -1,
+		.idx_normal_max_opp = 0,
 		.idx_opp_ppm_base = 15,
 		.idx_opp_ppm_limit = 0,
 		.Vproc_buck_id	= CPU_DVFS_VPROC12,
@@ -69,7 +69,7 @@ struct mt_cpu_dvfs cpu_dvfs[NR_MT_CPU_DVFS] = {
 		.name		= __stringify(MT_CPU_DVFS_L),
 		.id		= MT_CPU_DVFS_L,
 		.cpu_id		= 6,
-		.idx_normal_max_opp = -1,
+		.idx_normal_max_opp = 0,
 		.idx_opp_ppm_base = 15,
 		.idx_opp_ppm_limit = 0,
 		.Vproc_buck_id	= CPU_DVFS_VPROC11,
@@ -82,7 +82,7 @@ struct mt_cpu_dvfs cpu_dvfs[NR_MT_CPU_DVFS] = {
 		.name		= __stringify(MT_CPU_DVFS_CCI),
 		.id		= MT_CPU_DVFS_CCI,
 		.cpu_id		= 10,
-		.idx_normal_max_opp = -1,
+		.idx_normal_max_opp = 0,
 		.idx_opp_ppm_base = 15,
 		.idx_opp_ppm_limit = 0,
 		.Vproc_buck_id	= CPU_DVFS_VPROC12,
@@ -536,7 +536,7 @@ static int can_turbo;
 void mt_cpufreq_turbo_action(unsigned long action,
 	unsigned int *cpus, enum mt_cpu_dvfs_id cluster_id)
 {
-	can_turbo = 0;
+	can_turbo = 1;
 }
 
 int mt_cpufreq_turbo_config(enum mt_cpu_dvfs_id id,
