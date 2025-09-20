@@ -452,7 +452,7 @@ static unsigned int FY_G75Tbl[NR_FREQ * NR_MT_CPU_DVFS][ARRAY_COL_SIZE] = {
 
 
 	/* CCI */
-	{ 1600, 81, 1, 1 }, /* CCI */
+	{ 1477, 81, 1, 1 }, /* CCI */
 	{ 1343, 81, 1, 1 },
 	{ 1290, 81, 1, 1 },
 	{ 1263, 80, 1, 1 },
