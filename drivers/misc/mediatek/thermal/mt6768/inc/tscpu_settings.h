@@ -75,7 +75,7 @@
  * Only 1, 2, 4, 8, 16 are valid values,
  * they means one reading is a avg of X samples
  */
-#define THERMAL_CONTROLLER_HW_FILTER			(2) /* 1, 2, 4, 8, 16 */
+#define THERMAL_CONTROLLER_HW_FILTER			(4) /* 1, 2, 4, 8, 16 */
 
 /* 1: turn on thermal controller HW thermal protection; 0: turn off */
 #define THERMAL_CONTROLLER_HW_TP				(1)
